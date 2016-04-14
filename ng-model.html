@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app> <!-- Agregamos una directiva de angular para que el html sepa que vamos a trabajar con AngularJs, las directivas son bloques de instrucciones lo que angular tiene que hacer -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- INCLUIR BOOTSTRAP-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- INCLUIR ANGULARJS-->
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<title>FACTURACIÓN - ANGULARJS</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Directiva ng-model</h1>
+		<h4>en angularjs - Permite enlazar a variables aunque no estén definidas</h4>
+		<hr>
+		
+		<p>
+			Su nombre: {{ nombre | uppercase}}
+			<br>
+			<input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+		</p>
+		<p>
+		Seleccione el País: {{ pais | uppercase }}
+			<select class="form-control" ng-model="pais">
+				<option value="1">Costa Rica</option>
+				<option value="2">México</option>
+				<option value="3">Colombia</option>
+			</select>
+		</p>
+		<hr>
+		<p>
+			Selecciones las opciones que desea: {{ opt1 }} {{ opt2 }}
+			<br>
+			<input type="checkbox" ng-model="opt1" >Opcion 1
+			<br>
+			<input type="checkbox" ng-model="opt2" >Opcion 2
+			
+		</p>
+		<p>
+			Seleccione un género: {{ genero }}
+			<br>
+			<input type="radio" value="M" ng-model="genero">Masculino
+			<br>
+			<input type="radio" value="F" ng-model="genero">Femenino
+		</p>
+
+
+	</div>
+</body>
+</html>
