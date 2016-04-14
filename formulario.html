@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app> <!-- Agregamos una directiva de angular para que el html sepa que vamos a trabajar con AngularJs, las directivas son bloques de instrucciones lo que angular tiene que hacer -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- INCLUIR BOOTSTRAP-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- INCLUIR ANGULARJS-->
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<title>FACTURACIÓN - ANGULARJS</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Ejemplo de Formulario con NG-MODEL</h1>
+		<h4>en angularjs</h4>
+		<hr>
+		
+		<p>
+			Nombre Completo: 
+			<br>
+			<input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre completo" autofocus>
+			Lugar de Trabajo:
+			<br>
+			<input type="text" ng-model="trabajo" class="form-control" placeholder="Ingrese su lugar de trabajo">
+			Salario Mensual:
+			<br>
+			<input type="text" ng-model="salario" class="form-control" placeholder="Ingrese su salario mensual">
+		</p>
+
+		<hr>
+		
+		<p>
+			Nombre Completo: {{ nombre | uppercase }}
+			<br>
+			Lugar de Trabajo: {{ trabajo | uppercase }}
+			<br>
+			Salario Mensual: {{ salario | currency }}
+		</p>
+
+
+	</div>
+</body>
+</html>
