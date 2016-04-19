@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="universidadApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>NG-REPEAT - ng-repeat</title>
+
+
+        <!-- Incluir Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+
+        <!-- Incluir AngularJS -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <script src="js/app.js"></script>
+
+
+    </head>    
+    <body>
+
+        <div class="container" ng-controller="listadoCtrl">
+            
+            <h1>ng-repeat</h1>
+            <h4>Manejando repeticiones</h4>
+            <hr>
+
+            <!-- Utilizamos el archivo app.js para 
+            mostrar el listado del arreglado declarado en una función -->
+            <ul>
+                <li ng-repeat="nombre in listado">
+                    {{ nombre }}
+                </li>
+            </ul>
+            
+
+
+        </div><!-- fin del listadoCtrl -->
+
+    </body>
+</html>
